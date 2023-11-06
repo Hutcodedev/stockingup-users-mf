@@ -7,13 +7,15 @@ module.exports = {
         port: 8081
     },
     plugins: [
-        new ModuleFederalPlugin({
-            name: 'users',
-            filename: 'remoteEntry.js',
-            exposes: {
-                './UsersIndex': './src/index'
+        new ModuleFederalPlugin(
+            {
+                name: 'users',
+                filename: 'remoteEntry.js',
+                exposes: {
+                    './UsersIndex': './src/index'
+                }
             }
-        }),
+        ),
         new HtmlWebpackPlugin({
                 template: './public/index.html'
         })
