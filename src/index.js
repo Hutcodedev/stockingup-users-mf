@@ -1,6 +1,6 @@
 console.log('### Users mf ###');
 
-const root = document.querySelector('#root-products')
+const root = document.querySelector('#root-users')
 let content = ''
 
 for(let i = 0; i < 3; i++) {
